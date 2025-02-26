@@ -1,0 +1,106 @@
+{
+    // Basic stuff
+    "extensions.autoUpdate": false,
+    "workbench.tree.indent": 24,
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.colorTheme": "Bitone",
+    "editor.mouseWheelZoom": true,
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.enabled": false,
+    "editor.fontSize": 16,
+    "files.trimTrailingWhitespace": true,
+    "editor.bracketPairColorization.enabled": false,
+    "editor.unicodeHighlight.nonBasicASCII": false,  // Cyrillic characters
+
+    // file Associations
+    "files.associations": {
+        ".heex": "html-eex",  // Elixir templating stuff
+    },
+    "workbench.editorAssociations": {
+        "*.ttf": "default"
+    },
+
+    // Python
+    "[python]": {
+        "editor.inlayHints.enabled": "offUnlessPressed"  // for basedpyright
+    },
+    "basedpyright.analysis.inlayHints.variableTypes": false,
+    "basedpyright.analysis.inlayHints.callArgumentNames": false,
+
+    // Elixir
+    "[elixir]": {
+        "editor.tabSize": 2,
+    },
+    "elixirLS.suggestSpecs": false,  // annoying @spec blahblahblahblahblahblahblah line
+
+    // Lit.js
+    "lit-plugin.maxNodeModuleImportDepth": -1,
+    "lit-plugin.strict": true,
+    "lit-plugin.rules.no-unknown-tag-name": "error",
+    "lit-plugin.rules.no-unknown-slot": "error",
+    "lit-plugin.rules.no-unknown-property": "error",
+    "lit-plugin.rules.no-unknown-event": "error",
+    "lit-plugin.rules.no-unknown-attribute": "error",
+    "lit-plugin.rules.no-unclosed-tag": "error",
+    "lit-plugin.rules.no-nullable-attribute-binding": "error",
+    "lit-plugin.rules.no-noncallable-event-binding": "error",
+    "lit-plugin.rules.no-missing-import": "error",
+    "lit-plugin.rules.no-missing-element-type-definition": "error",
+    "lit-plugin.rules.no-invalid-tag-name": "error",
+    "lit-plugin.rules.no-invalid-css": "error",
+    "lit-plugin.rules.no-invalid-boolean-binding": "error",
+    "lit-plugin.rules.no-invalid-directive-binding": "error",
+    "lit-plugin.rules.no-invalid-attribute-name": "error",
+    "lit-plugin.rules.no-incompatible-type-binding": "error",
+    "lit-plugin.rules.no-incompatible-property-type": "error",
+    "lit-plugin.rules.no-complex-attribute-binding": "error",
+
+    // Calva (Clojure)
+    "calva.paredit.defaultKeyMap": "strict",
+    "calva.prettyPrintingOptions": {
+        "printEngine": "pprint",
+        "enabled": true,
+        "width": 120,
+        "maxLength": 50
+    },
+
+    // Zig
+    "[zig]": {
+        "editor.formatOnSave": false, // https://github.com/ziglang/vscode-zig/issues/92
+    },
+    "zig.zls.enabled": "on",
+    "zig.zls.highlightGlobalVarDeclarations": true,
+    "zig.zls.inlayHintsShowParameterName": false,
+    "zig.zls.inlayHintsShowVariableTypeHints": false,
+    "zig.zls.inlayHintsShowStructLiteralFieldType": false,
+    "zig.zls.inlayHintsHideRedundantParamNames": true,
+    "zig.zls.inlayHintsHideRedundantParamNamesLastToken": true,
+    "zig.zls.warnStyle": true,
+    "zig.zls.enableArgumentPlaceholders": false,
+
+    // Rust
+    "rust-analyzer.inlayHints.genericParameterHints.lifetime.enable": true,
+    "rust-analyzer.inlayHints.lifetimeElisionHints.enable": "skip_trivial",
+    "rust-analyzer.inlayHints.parameterHints.enable": false,
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+    "rust-analyzer.inlayHints.bindingModeHints.enable": true,
+
+    // Agda
+    "agdaMode.highlighting.getHighlightWithThemeColors": false,
+    "[agda]": {
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+    },
+
+    //Go
+    "[go]": {
+        "editor.insertSpaces": false,  // go uses tabs
+        "editor.formatOnSave": false,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "never"  // don't remove unused imports when you press Ctrl+S
+        }
+    },
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": [
+        "--fast"
+    ],
+}
